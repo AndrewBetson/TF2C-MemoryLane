@@ -1,0 +1,44 @@
+"items_game"
+{
+	"items"
+	{
+		"163"
+		{
+			"name"	"Crit-a-Cola"
+			"prefab"	"valve weapon_scout_drink"
+			"first_sale_date"	"2010/09/29"
+			"item_name"	"#TF_Unique_EnergyDrink_CritCola"
+			"item_description"	"#TF_Unique_EnergyDrink_CritCola_Desc"
+			"image_inventory"	"backpack/weapons/c_models/c_energy_drink/c_critcola"
+			"inspect_panel_dist" 			"20"
+			"model_player"	"models/weapons/c_models/c_energy_drink/c_energy_drink.mdl"
+			"visuals"
+			{
+				"skin" "2"
+				"custom_particlesystem"
+				{
+					"system"	"energydrink_cola_splash"
+				}
+				"sound_deploy"	"Scout.DodgeCanOpen"
+			}
+			"attributes"
+			{
+				"lunchbox adds minicrits"
+				{
+					"attribute_class"	"set_weapon_mode"
+					"value"	"2"
+				}
+				"mod_mark_attacker_for_death"
+				{
+					"attribute_class"	"mod_mark_attacker_for_death"
+					"value"	"5.0"
+				}
+				"move speed bonus"
+				{
+					"attribute_class"	"mult_player_movespeed"
+					"value"	"1.25"
+				}
+			}
+		}
+	}
+}

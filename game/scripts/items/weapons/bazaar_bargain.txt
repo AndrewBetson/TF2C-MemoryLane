@@ -1,0 +1,71 @@
+"items_game"
+{
+	"items"
+	{
+		"402"
+		{
+			"name"	"The Bazaar Bargain"
+			"prefab" "weapon_bazaar_sniper"
+			"particle_suffix" "bazaar_bargain"
+		}
+	}
+	"prefabs"
+	{
+		"weapon_bazaar_sniper"
+		{
+			"enabled"	"1"
+
+			"item_name"			"#TF_BazaarBargain"
+			"propername"		"1"
+			"item_description"	"#TF_BazaarBargain_Desc"
+			"item_type_name"	"#TF_Weapon_SniperRifle"
+			"item_quality"		"unique"
+
+			"item_logname"		"bazaar_bargain"
+			"item_iconname"		"bazaar_bargain"
+
+			"item_class"		"tf_weapon_sniperrifle_decap"
+
+			"item_slot"			"primary"
+			"anim_slot" 		"primary"
+
+			"model_player"		"models/workshop/weapons/c_models/c_bazaar_sniper/c_bazaar_sniper.mdl"
+			"image_inventory"	"backpack/workshop/weapons/c_models/c_bazaar_sniper/c_bazaar_sniper"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+
+			"attach_to_hands"	"1"
+
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_headshot"				"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"visuals"
+			{
+				"sound_single_shot" "Weapon_Bazaar_Bargain.Single"
+				"sound_burst" "Weapon_Bazaar_Bargain.SingleCrit"
+			}
+			"attributes"
+			{
+				"mult sniper charge penalty DISPLAY ONLY"
+				{
+					"attribute_class" "mult_sniper_charge_base_dummy"
+					"value" "1.5"
+				}
+			}
+			"used_by_classes"
+			{
+				"sniper" "1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset" "5 0 -8"
+			}
+			"mouse_pressed_sound" "ui/item_heavy_gun_pickup.wav"
+			"drop_sound" "ui/item_heavy_gun_drop.wav"
+		}
+	}
+}

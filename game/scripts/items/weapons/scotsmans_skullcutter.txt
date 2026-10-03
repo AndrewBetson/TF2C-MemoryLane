@@ -1,0 +1,81 @@
+"items_game"
+{
+	"items"
+	{
+		"172"
+		{
+			"name"	"The Scotsman's Skullcutter"
+			"prefab"	"weapon_battleaxe"
+			"first_sale_date"	"2010/09/29"
+			"particle_suffix"	"scotsmans_skullcutter"
+		}
+	}
+	"prefabs"
+	{
+		"weapon_battleaxe"
+		{
+			"prefab"	"weapon_sword"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_be_equipped_by_soldier_or_demo"	"1"
+				"can_deal_critical_damage"	"1"
+			}
+			"item_logname"	"battleaxe"
+			"item_iconname"	"battleaxe"
+			"item_type_name"	"#TF_Weapon_Axe"
+			"item_name"	"#TF_Unique_BattleAxe"
+			"item_description"		"#TF_Unique_BattleAxe_desc"
+			"image_inventory"	"backpack/workshop/weapons/c_models/c_battleaxe/c_battleaxe"
+			"image_inventory_size_h"		"96"
+			"model_player"	"models/workshop/weapons/c_models/c_battleaxe/c_battleaxe.mdl"
+			"propername"	"1"
+			"used_by_classes"
+			{
+				"demoman"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"			"10 -3 -10"
+			}
+			"attributes"
+			{
+				"is_a_sword"
+				{
+					"attribute_class"	"is_a_sword"
+					"value"				"72"
+				}
+				"provide on active"
+				{
+					"attribute_class"	"provide_on_active"
+					"value" "0"
+				}
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"1.2"
+				}
+				"move speed penalty"
+				{
+					"attribute_class"	"mult_player_movespeed"
+					"value"	"0.85"
+				}
+			}
+			"visuals"
+			{
+				"sound_melee_miss"	"Weapon_Sword.Swing"
+				"sound_melee_hit"	"Weapon_Sword.HitFlesh"
+				"sound_melee_hit_world"	"Weapon_Sword.HitWorld"
+				"sound_burst"		"Weapon_Sword.SwingCrit"
+				"sound_special1"	"Sword.Hit"
+				"sound_special2"	"Sword.Idle"
+			}
+			"mouse_pressed_sound"	"ui/item_knife_large_pickup.wav"
+			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+		}
+	}
+}

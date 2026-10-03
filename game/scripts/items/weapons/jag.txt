@@ -1,0 +1,83 @@
+"items_game"
+{
+	"items"
+	{
+		"329"
+		{
+			"name"	"The Jag"
+			"prefab"	"weapon_jag"
+			"first_sale_date"	"2010/12/20"
+			"particle_suffix"	"jag"
+		}
+	}
+	"prefabs"
+	{
+		"weapon_jag"
+		{
+			"enabled"	"1"
+			"item_class"	"tf_weapon_wrench"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_destroy_sappers"		"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_Wrench"
+			"item_name"	"#TF_Jag"
+			"item_slot"	"melee"
+			"item_quality"	"unique"
+			"min_ilevel"	"15"
+			"max_ilevel"	"15"
+			"propername"	"1"
+			"attach_to_hands"	"1"
+			"inspect_panel_dist" "45"
+			"item_logname"	"wrench_jag"
+			"item_iconname"	"wrench_jag"
+			"image_inventory"	"backpack/workshop/weapons/c_models/c_jag/c_jag"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/workshop/weapons/c_models/c_jag/c_jag.mdl"
+			"used_by_classes"
+			{
+				"engineer"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"			"10 -2 -9"
+				"weapon_stattrak_module_scale"		"0.756"
+			}
+			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
+			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+			"attributes"
+			{
+				"Construction rate increased"
+				{
+					"attribute_class"	"mult_construction_value"
+					"value"		"1.3"
+				}
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"0.75"
+				}
+				"kill eater score type"
+				{
+					"attribute_class"	"kill_eater_score_type"
+					"value" 	"3"
+				}
+				"kill eater score type 2"
+				{
+					"attribute_class"	"kill_eater_score_type_2"
+					"value" 	"0"
+				}
+			}
+		}
+	}
+}

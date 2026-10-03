@@ -1,0 +1,116 @@
+"items_game"
+{
+	"items"
+	{
+		"595"
+		{
+			"name"	"The Manmelter"
+			"first_sale_date"	"2011/12/15"
+			"item_class"	"tf_weapon_flaregun_revenge"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_posthumous_damage"	"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+				"can_deal_taunt_damage"		"1"
+				"can_extinguish"			"1"
+				"can_be_festivized"		"1"
+			}
+			"item_logname"	"manmelter"
+			"item_iconname"	"manmelter"
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_IndivisibleParticleSmasher"
+			"item_name"	"#TF_ManMelter"
+			"item_description"	"#TF_ManMelter_Desc"
+			"item_slot"	"secondary"
+			"anim_slot"	"ITEM1"
+			"image_inventory"	"backpack/workshop/weapons/c_models/c_drg_manmelter/c_drg_manmelter"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"inspect_panel_dist" 			"45"
+			"model_player"	"models/workshop/weapons/c_models/c_drg_manmelter/c_drg_manmelter.mdl"
+			"attach_to_hands"	"1"
+			"item_quality"	"unique"
+			"propername"	"1"
+			"min_ilevel"	"30"
+			"max_ilevel"	"30"
+			"used_by_classes"
+			{
+				"pyro"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"10 0 -10"
+			}
+			"attributes"
+			{
+				"energy weapon no ammo"
+				{
+					"attribute_class"	"energy_weapon_no_ammo"
+					"value" "1"
+				}
+				"energy weapon no deflect"
+				{
+					"attribute_class"	"energy_weapon_no_deflect"
+					"value" "1"
+				}
+				"fire rate penalty HIDDEN"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"1.2"
+				}
+				"Projectile speed increased"
+				{
+					"attribute_class"	"mult_projectile_speed"
+					"value"	"1.5"
+				}
+				"extinguish earns revenge crits"
+				{
+					"attribute_class"	"extinguish_revenge"
+					"value"	"1"
+				}
+				"crit mod disabled"
+				{
+					"attribute_class"	"mult_crit_chance"
+					"value"	"0"
+				}
+				"ragdolls become ash"
+				{
+					"attribute_class"	"ragdolls_become_ash"
+					"value"	"1"
+				}
+				"lunchbox adds minicrits"
+				{
+					"attribute_class"	"set_weapon_mode"
+					"value"	"2"
+				}
+			}
+			"visuals"
+			{
+				"animation_replacement"
+				{
+					"ACT_VM_IDLE"	"ACT_SECONDARY2_VM_IDLE"
+					"ACT_VM_DRAW"	"ACT_SECONDARY2_VM_DRAW"
+					"ACT_VM_PRIMARYATTACK"	"ACT_SECONDARY2_VM_PRIMARYATTACK"
+					"ACT_MP_ATTACK_STAND_PRIMARYFIRE"	"ACT_MP_ATTACK_STAND_SECONDARY2"
+					"ACT_MP_ATTACK_CROUCH_PRIMARYFIRE"	"ACT_MP_ATTACK_CROUCH_SECONDARY2"
+					"ACT_MP_ATTACK_SWIM_PRIMARYFIRE"	"ACT_MP_ATTACK_SWIM_SECONDARY2"
+					"ACT_MP_ATTACK_STANDACT_MP_ATTACK_AIRWALK_PRIMARYFIRE_PRIMARYFIRE"	"ACT_MP_ATTACK_AIRWALK_SECONDARY2"
+					"ACT_SECONDARY_VM_INSPECT_START"	"ACT_ITEM1_VM_INSPECT_START"
+					"ACT_SECONDARY_VM_INSPECT_IDLE"		"ACT_ITEM1_VM_INSPECT_IDLE"
+					"ACT_SECONDARY_VM_INSPECT_END"		"ACT_ITEM1_VM_INSPECT_END"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
+		}
+	}
+}

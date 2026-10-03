@@ -1,0 +1,81 @@
+"items_game"
+{
+	"items"
+	{
+		"415"
+		{
+			"name"	"The Reserve Shooter"
+			"prefab"	"weapon_reserve_shooter"
+			"particle_suffix"	"reserve_shooter"
+		}
+	}
+	"prefabs"
+	{
+		"weapon_reserve_shooter"
+		{
+			"enabled"	"1"
+			"item_class"	"tf_weapon_shotgun"
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_be_equipped_by_soldier_or_demo"	"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+				"can_deal_taunt_damage"		"1"
+			}
+			"item_type_name"	"#TF_Weapon_Shotgun"
+			"item_name"	"#TF_ReserveShooter"
+			"item_slot"	"secondary"
+			"item_logname"	"reserve_shooter"
+			"item_iconname"	"reserve_shooter"
+			"show_in_armory"	"1"
+			"item_quality"	"unique"
+			"propername"	"1"
+			"attach_to_hands"	"1"
+			"image_inventory"	"backpack/workshop/weapons/c_models/c_reserve_shooter/c_reserve_shooter"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"used_by_classes"
+			{
+				"soldier"	"1"
+				"pyro"		"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"10 0 -10"
+			}
+			"model_player"	"models/workshop/weapons/c_models/c_reserve_shooter/c_reserve_shooter.mdl"
+			"visuals"
+			{
+				"sound_single_shot"	"Weapon_Reserve_Shooter.Single"
+				"sound_burst"		"Weapon_Reserve_Shooter.SingleCrit"
+			}
+			"attributes"
+			{
+				"clip size penalty"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value" "0.66"
+				}
+				"mod mini-crit airborne"
+				{
+					"attribute_class"	"mini_crit_airborne"
+					"value" "1"
+				}
+				"single wep deploy time decreased"
+				{
+					"attribute_class"	"mult_single_wep_deploy_time"
+					"value"	"0.80"
+				}
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value" "1"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+		}
+	}
+}

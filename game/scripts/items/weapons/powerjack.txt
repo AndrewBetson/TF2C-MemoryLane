@@ -1,0 +1,75 @@
+"items_game"
+{
+	"items"
+	{
+		"214"
+		{
+			"name"	"The Powerjack"
+			"prefab" "weapon_powerjack"
+			"first_sale_date"	"2010/09/29"
+			"particle_suffix"	"powerjack"
+		}
+	}
+	"prefabs"
+	{
+		"weapon_powerjack"
+		{
+			"enabled"	"1"
+			"item_class"	"tf_weapon_fireaxe"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"				"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"		"1"
+			}
+			"item_logname"	"powerjack"
+			"item_iconname"	"powerjack"
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_SledgeHammer"
+			"item_name"	"#TF_ThePowerjack"
+			"item_slot"	"melee"
+			"image_inventory"	"backpack/workshop/weapons/c_models/c_powerjack/c_powerjack"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/workshop/weapons/c_models/c_powerjack/c_powerjack.mdl"
+			"attach_to_hands"	"1"
+			"inspect_panel_dist" "65"
+			"item_quality"	"unique"
+			"propername"	"1"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"used_by_classes"
+			{
+				"pyro"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"				"10 2 -9"
+			}
+			"attributes"
+			{
+				"heal on kill"
+				{
+					"attribute_class"	"heal_on_kill"
+					"value"	"75"
+				}
+				"provide on active"
+				{
+					"attribute_class"	"provide_on_active"
+					"value" "1"
+				}
+			}
+			"visuals"
+			{
+				"sound_melee_hit"	"Weapon_Machete.HitFlesh"
+			}
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+		}
+	}
+}

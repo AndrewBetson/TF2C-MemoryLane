@@ -1,0 +1,68 @@
+"items_game"
+{
+	"items"
+	{
+		"173"
+		{
+			"name"	"The Vita-Saw"
+			"first_sale_date"	"2010/09/29"
+			"item_class"	"tf_weapon_bonesaw"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+			}
+			"item_logname"	"battleneedle"
+			"item_iconname"	"battleneedle"
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_Bonesaw"
+			"item_name"	"#TF_Unique_BattleSaw"
+			"item_description" "#TF_Unique_BattleSaw_Desc"
+			"item_slot"	"melee"
+			"image_inventory"	"backpack/workshop/weapons/c_models/c_uberneedle/c_uberneedle"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"inspect_panel_dist" 			"50"
+			"model_player"	"models/workshop/weapons/c_models/c_uberneedle/c_uberneedle.mdl"
+			"attach_to_hands"	"1"
+			"item_quality"	"unique"
+			"propername"	"1"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"used_by_classes"
+			{
+				"medic"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -12"
+			}
+			"attributes"
+			{
+				"ubercharge_preserved_on_spawn_max"
+				{
+					"attribute_class"	"ubercharge_preserved_on_spawn_max"
+					"value" "0.2"
+				}
+				"max health additive penalty"
+				{
+					"attribute_class"	"add_maxhealth"
+					"value" "-10"
+				}
+			}
+			"visuals"
+			{
+				"sound_taunt"	"Taunt.MedicViolinUber"
+				"sound_melee_hit"	"Weapon_UberSaw.HitFlesh"
+			}
+			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
+			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+		}
+	}
+}

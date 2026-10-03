@@ -1,0 +1,84 @@
+"items_game"
+{
+	"items"
+	{
+		"44" // Sandman
+		{
+			"name"				"The Sandman"
+			"item_name"			"#TF_Unique_Achievement_Bat"
+			"item_type_name"	"#TF_Weapon_Bat"
+			"item_quality"		"unique"
+
+			"item_logname"		"sandman"
+			"item_iconname"		"sandman"
+
+			"item_class"		"tf_weapon_bat_wood"
+
+			"item_slot"			"melee"
+			"anim_slot"			"melee"
+
+			"model_player"		"models/weapons/c_models/c_wooden_bat/c_wooden_bat.mdl"
+			"image_inventory"	"backpack/weapons/c_models/c_wooden_bat/c_wooden_bat"
+
+			"attach_to_hands"	"1"
+
+			"used_by_classes"
+			{
+				"scout"			"1"
+			}
+
+			"attributes"
+			{
+				"mod bat launches balls"
+				{
+					"attribute_class"	"set_weapon_mode"
+					"value"	"1"
+				}
+				"mod sandman stun"
+				{
+					"attribute_class"	"mod_sandman_stun"
+					"value" "1"
+				}
+				"max health additive penalty"
+				{
+					"attribute_class"	"add_maxhealth"
+					"value" "-15"
+				}
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value" "1"
+				}
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset" "10 0 -6"
+			}
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+						"skin_red"		"0"
+						"skin_blu"		"1"
+					}
+				}
+			}
+
+			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
+			"drop_sound"			"ui/item_metal_weapon_drop.wav"
+		}
+	}
+	"attributes"
+	{
+		"40000"
+		{
+			"name"				"mod sandman stun"
+			"attribute_class"	"mod_sandman_stun"
+			"hidden"			"1"
+			"effect_type"		"positive"
+			"stored_as_integer"	"0"
+		}
+	}
+}

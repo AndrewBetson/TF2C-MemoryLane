@@ -1,0 +1,79 @@
+"items_game"
+{
+	"items"
+	{
+		"412"
+		{
+			"name"	"The Overdose"
+			"prefab"	"valve"
+			"first_sale_date"	"2011/03/22"
+			"item_class"	"tf_weapon_syringegun_medic"
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_posthumous_damage"	"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"item_logname"	"proto_syringe"
+			"item_iconname"	"proto_syringe"
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_SyringeGun_Prototype"
+			"item_name"		"#TF_Overdose"
+			"item_description"	"#TF_Overdose_Desc"
+			"item_slot"	"primary"
+			"image_inventory"	"backpack/weapons/c_models/c_proto_syringegun/c_proto_syringegun"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/c_models/c_proto_syringegun/c_proto_syringegun.mdl"
+			"attach_to_hands"	"1"
+			"item_quality"	"unique"
+			"propername"	"1"
+			"used_by_classes"
+			{
+				"medic"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -14"
+			}
+			"attributes"
+			{
+				"move speed bonus resource level"
+				{
+					"attribute_class"	"mult_player_movespeed_resource_level"
+					"value"	"1.10"
+				}
+				"lunchbox adds minicrits"
+				{
+					"attribute_class"	"set_weapon_mode"
+					"value"	"1"
+				}
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"0.90"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"    "Weapon_Overdose.Single"
+				"sound_burst"    "Weapon_Overdose.SingleCrit"
+			}
+			"visuals_red"
+			{
+				"skin" "0"
+				"sound_single_shot"    "Weapon_Overdose.Single"
+				"sound_burst"    "Weapon_Overdose.SingleCrit"
+			}
+			"visuals_blu"
+			{
+				"skin" "1"
+				"sound_single_shot"    "Weapon_Overdose.Single"
+				"sound_burst"    "Weapon_Overdose.SingleCrit"
+			}
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
+		}
+	}
+}

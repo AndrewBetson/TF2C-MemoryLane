@@ -1,0 +1,83 @@
+"items_game"
+{
+	"items"
+	{
+		"772"
+		{
+			"name"	"Baby Face's Blaster"
+			"prefab"		"weapon_scattergun"
+			"first_sale_date"	"2012/06/27"
+			"item_class"	"tf_weapon_pep_brawler_blaster"
+			"capabilities"
+			{
+				"can_craft_count"	"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+				"can_be_festivized"		"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_Scattergun"
+			"item_name"	"#TF_Weapon_PEP_Scattergun"
+			"item_description"	"#TF_Weapon_PEP_Scattergun_Desc"
+			"item_logname"	"pep_brawlerblaster"
+			"item_iconname"	"pep_brawlerblaster"
+			"item_quality"	"unique"
+			"baseitem" "0"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"inspect_panel_dist" "38"
+			"image_inventory"	"backpack/workshop/weapons/c_models/c_pep_scattergun/c_pep_scattergun"
+			"model_player"	"models/workshop/weapons/c_models/c_pep_scattergun/c_pep_scattergun.mdl"
+			"attach_to_hands" "1"
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"10 0 -12"
+			}
+			"attributes"
+			{
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value" "0.70"
+				}
+				"weapon spread bonus"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value" "0.6"
+				}
+				"move speed penalty"
+				{
+					"attribute_class"	"mult_player_movespeed"
+					"value"	"0.65"
+				}
+				"hype on damage"
+				{
+					"attribute_class"	"hype_on_damage"
+					"value"	"1"
+				}
+				"hype resets on jump"
+				{
+					"attribute_class"	"hype_resets_on_jump"
+					"value"	"1"
+				}
+			}
+			"visuals"
+			{
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/workshop/weapons/c_models/c_pep_scattergun/c_pep_scattergun_festivizer.mdl"
+					}
+				}
+				"sound_single_shot"	"Weapon_Brawler_Blaster.Single"
+				"sound_burst"		"Weapon_Brawler_Blaster.SingleCrit"
+			}
+		}
+	}
+}
