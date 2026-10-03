@@ -47,8 +47,8 @@
 				"linux64"
 				{
 					"offset" "59Ch"
-					"verify" "\xC7\x85\x48\xFF\xFF\xFF\x01\x01\x00\x00" // MOV dword ptr [EBP + local_b8],0x101 (TF_STUN_SOUND | TF_STUN_MOVEMENT)
-					"patch" "\xC7\x85\x48\xFF\xFF\xFF\x41\x00\x00\x00"	// MOV dword ptr [EBP + local_b8],0x140 (TF_STUN_SOUND | TF_STUN_LOSER_STATE)
+					"verify" "\xC7\x85\x48\xFF\xFF\xFF\x01\x01\x00\x00"
+					"patch" "\xC7\x85\x48\xFF\xFF\xFF\x41\x00\x00\x00"
 				}
 			}
 			"CTFStunBall::ApplyBallImpactEffectOnVictim::OldHomerunStun"
@@ -57,8 +57,8 @@
 				"linux64"
 				{
 					"offset" "12Ch"
-					"verify" "\xC7\x85\x48\xFF\xFF\xFF\x09\x00\x00\x00"	// MOV dword ptr [EBP + local_b8],0x9 (TF_STUN_SPECIAL_SOUND | TF_STUN_MOVEMENT)
-					"patch" "\xC7\x85\x48\xFF\xFF\xFF\xB0\x00\x00\x00"	// MOV dword ptr [EBP + local_b8],0x0B (TF_STUN_SPECIAL_SOUND | TF_STUN_BOTH)
+					"verify" "\xC7\x85\x48\xFF\xFF\xFF\x09\x00\x00\x00"
+					"patch" "\xC7\x85\x48\xFF\xFF\xFF\xB0\x00\x00\x00"
 				}
 			}
 
@@ -70,8 +70,8 @@
 				"linux64"
 				{
 					"offset" "75h"
-					"verify" "\x48\x85\xC0"	// TEST RAX,RAX
-					"patch" "\x48\x39\xC0"	// CMP RAX,RAX
+					"verify" "\x48\x85\xC0"
+					"patch" "\x48\x39\xC0"
 				}
 			}
 
