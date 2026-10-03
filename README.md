@@ -15,8 +15,9 @@ Memory Lane is released under version 3 of the GNU Affero General Public License
 For more info, see `LICENSE.md`.
 
 # TODO
-- Revert Minigun damage ramp-up (if it even exists in TF2C?)
+- Ensure all weapons have original attributes
+- Reimplement item sets
 - Revert the Wrangler's behavior
 - Revert Soda Popper's behavior
-- Ensure all weapons have original attributes
+- Revert Gun Mettle Spy changes (if they even exist in TF2C?)
 - Other things I can't think of at the moment
