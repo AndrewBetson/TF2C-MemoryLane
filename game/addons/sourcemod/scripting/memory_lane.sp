@@ -24,6 +24,8 @@ public Plugin myinfo = {
 	url			= "https://www.github.com/AndrewBetson/TF2C-MemoryLane/"
 }
 
+ConVar ml_use_custom_item_schema;
+
 ConVar ml_rollback_sandman_stun;
 ConVar ml_rollback_eat_own_thrown_sandvich;
 ConVar ml_rollback_caber_nerf;
@@ -37,6 +39,7 @@ public void OnPluginStart() {
 		ThrowNativeError( SP_ERROR_NOT_FOUND, "Failed to load game config file." );
 	}
 
+	ml_use_custom_item_schema = CreateConVar( "ml_use_custom_item_schema", "1", "Enable Memory Lane's custom item schema." );
 	ml_rollback_sandman_stun = CreateConVar( "ml_rollback_sandman_stun", "1", "Enable old Sandman stun effects." );
 	ml_rollback_eat_own_thrown_sandvich = CreateConVar( "ml_rollback_eat_own_thrown_sandvich", "1", "Enable eating own thrown sandvich." );
 	ml_rollback_caber_nerf = CreateConVar( "ml_rollback_caber_nerf", "1", "Enable old caber base damage/falloff." );
@@ -45,6 +48,10 @@ public void OnPluginStart() {
 	ml_rollback_soda_popper_hype_condition = CreateConVar( "ml_rollback_soda_popper_hype_condition", "1", "Enable old soda popper hype condition." );
 
 	AutoExecConfig( true, "memory_lane" );
+
+	if ( ml_use_custom_item_schema.BoolValue ) {
+		AddFileToDownloadsTable( "scripts/items/custom_items_game.txt" );
+	}
 
 	// Sandman stun
 

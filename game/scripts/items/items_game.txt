@@ -1,111 +1,5 @@
-#base "weapons/ali_babas_wee_booties.txt"
-#base "weapons/ambassador.txt"
-#base "weapons/amputator.txt"
-#base "weapons/atomizer.txt"
-#base "weapons/axtinguisher.txt"
-#base "weapons/baby_faces_blaster.txt"
-#base "weapons/backburner.txt"
-#base "weapons/back_scratcher.txt"
-#base "weapons/bazaar_bargain.txt"
-#base "weapons/beggars_bazooka.txt"
-#base "weapons/big_earner.txt"
-#base "weapons/black_box.txt"
-#base "weapons/bonk_atomic_punch.txt"
-#base "weapons/boston_basher.txt"
-#base "weapons/brass_beast.txt"
-#base "weapons/buff_banner.txt"
-#base "weapons/buffalo_steak_sandvich.txt"
-#base "weapons/bushwacka.txt"
-#base "weapons/candy_cane.txt"
-#base "weapons/chargin_targe.txt"
-#base "weapons/claidheamohmor.txt"
-#base "weapons/cleaners_carbine.txt"
-#base "weapons/cloak_and_dagger.txt"
-#base "weapons/concheror.txt"
-#base "weapons/connivers_kunai.txt"
-#base "weapons/cow_mangler_5000.txt"
-#base "weapons/cozy_camper.txt"
-#base "weapons/crit_a_cola.txt"
-#base "weapons/crusaders_crossbow.txt"
-#base "weapons/dalokohs_bar.txt"
-#base "weapons/darwins_danger_shield.txt"
-#base "weapons/dead_ringer.txt"
-#base "weapons/degreaser.txt"
-#base "weapons/detonator.txt"
-#base "weapons/diamondback.txt"
-#base "weapons/direct_hit.txt"
-#base "weapons/disciplinary_action.txt"
-#base "weapons/enforcer.txt"
-#base "weapons/equalizer.txt"
-#base "weapons/escape_plan.txt"
-#base "weapons/eureka_effect.txt"
-#base "weapons/eviction_notice.txt"
-#base "weapons/eyelander.txt"
-#base "weapons/family_business.txt"
-#base "weapons/fan_o_war.txt"
-#base "weapons/fists_of_steel.txt"
-#base "weapons/flying_guillotine.txt"
-#base "weapons/force_a_nature.txt"
-#base "weapons/frontier_justice.txt"
-#base "weapons/gloves_of_running_urgently.txt"
-#base "weapons/gunslinger.txt"
-#base "weapons/half_zatoichi.txt"
-#base "weapons/hitmans_heatmaker.txt"
-#base "weapons/holiday_punch.txt"
-#base "weapons/holy_mackerel.txt"
-#base "weapons/homewrecker.txt"
-#base "weapons/huo_long_heater.txt"
-#base "weapons/jag.txt"
-#base "weapons/jarate.txt"
-#base "weapons/killing_gloves_of_boxing.txt"
-#base "weapons/letranger.txt"
-#base "weapons/liberty_launcher.txt"
-#base "weapons/loch_n_load.txt"
-#base "weapons/machina.txt"
-#base "weapons/mad_milk.txt"
-#base "weapons/manmelter.txt"
-#base "weapons/mantreads.txt"
-#base "weapons/market_gardener.txt"
-#base "weapons/natascha.txt"
-#base "weapons/neon_annihilator.txt"
-#base "weapons/original.txt"
-#base "weapons/overdose.txt"
-#base "weapons/pain_train.txt"
-#base "weapons/persian_persuader.txt"
-#base "weapons/phlogistinator.txt"
-#base "weapons/pomson_6000.txt"
-#base "weapons/powerjack.txt"
-#base "weapons/pretty_boys_pocket_pistol.txt"
-#base "weapons/quick_fix.txt"
-#base "weapons/razorback.txt"
-#base "weapons/red_tape_recorder.txt"
-#base "weapons/reserve_shooter.txt"
-#base "weapons/righteous_bison.txt"
-#base "weapons/rocket_jumper.txt"
-#base "weapons/sandman.txt"
-#base "weapons/scorch_shot.txt"
-#base "weapons/scottish_resistance.txt"
-#base "weapons/shahanshah.txt"
-#base "weapons/sharpened_volcano_fragment.txt"
-#base "weapons/short_circuit.txt"
-#base "weapons/shortstop.txt"
-#base "weapons/southern_hospitatlity.txt"
-#base "weapons/splendid_screen.txt"
-#base "weapons/spy_cicle.txt"
-#base "weapons/sticky_jumper.txt"
-#base "weapons/sun_on_a_stick.txt"
-#base "weapons/sydney_sleeper.txt"
-#base "weapons/third_degree.txt"
-#base "weapons/tomislav.txt"
-#base "weapons/tribalmans_shiv.txt"
-#base "weapons/vita_saw.txt"
-#base "weapons/ullapool_caber.txt"
-#base "weapons/warriors_spirit.txt"
-#base "weapons/widowmaker.txt"
-#base "weapons/winger.txt"
-#base "weapons/wrangler.txt"
-#base "weapons/wrap_assassin.txt"
-#base "weapons/your_eternal_reward.txt"
+// This file exists to remove TF2C's new weapons
+// (minus Civilians canes)
 
 "items_game"
 {
@@ -1291,6 +1185,349 @@
 			}
 			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+		}
+
+		// ----------------------------------------------------------------
+		// Compatibility weapons
+		// ----------------------------------------------------------------
+		"985" // Strength (Mannpower)
+		{
+			"name"					"Powerup Strength"
+			"item_class"			"saxxy"
+			"item_name"				"#TF_Powerup_Strength"
+			"item_description"		"#TF_Powerup_Strength_Desc"
+			"image_inventory"		"Effects/powerup_strength_hud"
+		}
+		"986" // Haste (Mannpower)
+		{
+			"name"					"Powerup Haste"
+			"item_class"			"saxxy"
+			"item_name"				"#TF_Powerup_Haste"
+			"item_description"		"#TF_Powerup_Haste_Desc"
+			"image_inventory"		"Effects/powerup_haste_hud"
+		}
+		"987" // Regeneration (Mannpower)
+		{
+			"name"					"Powerup Regen"
+			"item_class"			"saxxy"
+			"item_name"				"#TF_Powerup_Regen"
+			"item_description"		"#TF_Powerup_Regen_Desc"
+			"image_inventory"		"Effects/powerup_regen_hud"
+		}
+		"988" // Resistance (Mannpower)
+		{
+			"name"					"Powerup Resist"
+			"item_class"			"saxxy"
+			"item_name"				"#TF_Powerup_Resist"
+			"item_description"		"#TF_Powerup_Resist_Desc"
+			"image_inventory"		"Effects/powerup_resist_hud"
+		}
+		"989" // Vampire (Mannpower)
+		{
+			"name"					"Powerup Vampire"
+			"item_class"			"saxxy"
+			"item_name"				"#TF_Powerup_Vampire"
+			"item_description"		"#TF_Powerup_Vampire_Desc"
+			"image_inventory"		"Effects/powerup_vampire_hud"
+		}
+		"990" // Reflect (Mannpower)
+		{
+			"name"					"Powerup Reflect"
+			"item_class"			"saxxy"
+			"item_name"				"#TF_Powerup_Reflect"
+			"item_description"		"#TF_Powerup_Reflect_Desc"
+			"image_inventory"		"Effects/powerup_reflect_hud"
+		}
+		"991" // Precision (Mannpower)
+		{
+			"name"					"Powerup Precision"
+			"item_class"			"saxxy"
+			"item_name"				"#TF_Powerup_Precision"
+			"item_description"		"#TF_Powerup_Precision_Desc"
+			"image_inventory"		"Effects/powerup_precision_hud"
+		}
+		"992" // Agility (Mannpower)
+		{
+			"name"					"Powerup Agility"
+			"item_class"			"saxxy"
+			"item_name"				"#TF_Powerup_Agility"
+			"item_description"		"#TF_Powerup_Agility_Desc"
+			"image_inventory"		"Effects/powerup_agility_hud"
+		}
+		"1154" // Knockout (Mannpower)
+		{
+			"name"					"Powerup Knockout"
+			"item_class"			"saxxy"
+			"item_name"				"#TF_Powerup_Knockout"
+			"item_description"		"#TF_Powerup_Knockout_Desc"
+			"image_inventory"		"Effects/powerup_knockout_hud"
+		}
+		"1159" // King (Mannpower)
+		{
+			"name"					"Powerup King"
+			"item_class"			"saxxy"
+			"item_name"				"#TF_Powerup_King"
+			"item_description"		"#TF_Powerup_King_Desc"
+			"image_inventory"		"Effects/powerup_king_hud"
+		}
+		"1160" // Plague (Mannpower)
+		{
+			"name"					"Powerup Plague"
+			"item_class"			"saxxy"
+			"item_name"				"#TF_Powerup_Plague"
+			"item_description"		"#TF_Powerup_Plague_Desc"
+			"image_inventory"		"Effects/powerup_plague_hud"
+		}
+		"1161" // Supernova (Mannpower)
+		{
+			"name"					"Powerup Supernova"
+			"item_class"			"saxxy"
+			"item_name"				"#TF_Powerup_Supernova"
+			"item_description"		"#TF_Powerup_Supernova_Desc"
+			"image_inventory"		"Effects/powerup_supernova_hud"
+		}
+		"1132" // Spellbook Magazine (Halloween)
+		{
+			"name"				"TF_WEAPON_SPELLBOOK"
+			"item_name"			"#TF_Spellbook_Basic"
+			"item_type_name"	"#TF_Spellbook_Type"
+			"item_description"	"#TF_SpellBook_Basic_Desc"
+			"item_quality"		"normal"
+
+			"item_class"	"tf_weapon_spellbook"
+			"item_slot"		"action"
+			"baseitem" 		"1"
+			"used_by_classes"
+			{
+				"Scout"		"1"
+				"Sniper"	"1"
+				"Soldier"	"1"
+				"Demoman"	"1"
+				"Medic"		"1"
+				"Heavy"		"1"
+				"Spy"		"1"
+				"Engineer"	"1"
+				"Pyro"		"1"
+				"Civilian"	"1"
+			}
+			"attributes"
+			{
+				"single wep deploy time decreased"
+				{
+					"attribute_class"	"mult_single_wep_deploy_time"
+					"value"				"0.5"
+				}
+			}
+
+			"model_player"	""
+			"anim_slot" "MELEE_ALLCLASS"
+			"attach_to_hands"	"1"
+			"act_as_weapon"		"1"
+			"visuals"
+			{
+				"animation_replacement"
+				{
+					"ACT_MP_ATTACK_STAND_MELEE_ALLCLASS"	"ACT_MP_THROW"
+					"ACT_VM_DRAW" 							"ACT_SPELL_VM_DRAW"
+					"ACT_VM_IDLE" 							"ACT_SPELL_VM_IDLE"
+					"ACT_VM_PRIMARYATTACK" 					"ACT_SPELL_VM_FIRE"
+				}
+				"styles"
+				{
+					"0"
+					{
+						"skin_red"	"0"
+						"skin_blu"	"1"
+					}
+				}
+			}
+
+			"image_inventory"		"backpack/props_halloween/hwn_spellbook_magazine"
+			"mouse_pressed_sound"	"ui/item_hat_pickup.wav"
+			"drop_sound"			"ui/item_hat_drop.wav"
+		}
+		"1152" // Grappling Hook (Mannpower)
+		{
+			"name"				"TF_WEAPON_GRAPPLINGHOOK"
+			"item_name"			"#TF_Weapon_GrapplingHook"
+			"item_type_name"	"#TF_Weapon_GrapplingHook"
+			"item_description"	"#TF_Weapon_GrapplingHook_desc"
+			"item_quality"		"normal"
+
+			"item_class"	"tf_weapon_grapplinghook"
+			"item_slot"		"action"
+			"baseitem"		"1"
+			"used_by_classes"
+			{
+				"Scout"		"1"
+				"Sniper"	"1"
+				"Soldier"	"1"
+				"Demoman"	"1"
+				"Medic"		"1"
+				"Heavy"		"1"
+				"Spy"		"1"
+				"Engineer"	"1"
+				"Pyro"		"1"
+				"Civilian"	"1"
+			}
+			"attributes"
+			{
+				"reload time increased hidden"
+				{
+					"attribute_class"	"mult_reload_time_hidden"
+					"value"				"0"
+				}
+				"override projectile type"
+				{
+					"attribute_class"	"override_projectile_type"
+					"value"				"26" 
+				}
+				"single wep deploy time decreased"
+				{
+					"attribute_class"	"mult_single_wep_deploy_time"
+					"value"				"0"
+				}
+				"switch from wep deploy time decreased"
+				{
+					"attribute_class"	"mult_switch_from_wep_deploy_time"
+					"value"				"0.2"
+				}
+				"force weapon switch"
+				{
+					"attribute_class"	"force_weapon_switch"
+					"value"				"1"
+				}
+			}
+
+			"model_player"	"models/weapons/c_models/c_grappling_hook/c_grappling_hook.mdl"
+			"anim_slot" "MELEE_ALLCLASS"
+			"attach_to_hands"	"1"
+			"act_as_weapon"		"1"
+			"item_logname"	"grappling_hook"
+			"item_iconname"	"grappling_hook"
+
+			"image_inventory"		"backpack/weapons/c_models/c_grappling_hook/c_grappling_hook"
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"			"ui/item_light_gun_drop.wav"
+		}
+		"1155" // PASS Time Jack (PASS Time)
+		{
+			"name"				"TF_WEAPON_PASSTIME_GUN"
+			"item_name"			"#Weapon_Passtime_Gun"
+			"item_type_name"	"#Weapon_Passtime_Gun"
+			"item_quality"		"normal"
+
+			"item_class"	"tf_weapon_passtime_gun"
+			"item_slot"	"utility"
+			"baseitem"	"1"
+			"hidden"	"1"
+			"used_by_classes"
+			{
+				"Scout"		"1"
+				"Sniper"	"1"
+				"Soldier"	"1"
+				"Demoman"	"1"
+				"Medic"		"1"
+				"Heavy"		"1"
+				"Spy"		"1"
+				"Engineer"	"1"
+				"Pyro"		"1"
+				"Civilian"	"1"
+			}
+
+			"model_player" "models/passtime/ball/passtime_ball.mdl"
+			"anim_slot"	"MELEE_ALLCLASS"
+			"attach_to_hands"	"1"
+
+			"image_inventory"		"backpack/weapons/w_models/w_wrench"
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"			"ui/item_heavy_gun_drop.wav"
+		}
+
+		// ----------------------------------------------------------------
+		// Civilian weapons
+		// ----------------------------------------------------------------
+
+		"2000" // Umbrella
+		{
+			"name"				"Umbrella"
+			"item_name"			"#TF_Weapon_Umbrella"
+			"item_type_name"	"#TF_Weapon_Umbrella"
+			"item_description"	"#TF_Weapon_Umbrella_Desc"
+			"item_quality"		"normal"
+
+			"item_class"	"tf2c_weapon_umbrella"
+			"item_slot"		"melee"
+			"baseitem"		"1"
+			"used_by_classes"
+			{
+				"Civilian"	"1"
+			}
+
+			"model_player"		"models/weapons/v_models/v_umbrella_civilian.mdl"
+			"model_world"		"models/weapons/w_models/w_umbrella.mdl"
+			"anim_slot"			"melee"
+			"attach_to_hands"	"2"
+			"static_attrs"
+			{
+				"umbrella explain"		"1"
+				"min_viewmodel_offset"	"10 0 -7"
+			}
+			"item_logname"	"umbrella"
+			"item_iconname"	"umbrella"
+			
+			"image_inventory"		"backpack/weapons/w_models/w_umbrella"
+			"mouse_pressed_sound"	"ui/item_umbrella_pickup.wav"
+			"drop_sound"			"ui/item_hat_drop.wav"
+		}
+		"2020" // Derby Cane
+		{
+			"name"				"Derby Cane"
+			"item_name"			"#TF_Weapon_DerbyCane"
+			"item_type_name"	"#TF_Weapon_Cane"
+			"item_description"	"#TF_Weapon_DerbyCane_Desc"
+			"item_quality"		"normal"
+
+			"item_class"	"tf2c_weapon_umbrella"
+			"item_slot"		"melee"
+			"used_by_classes"
+			{
+				"Civilian"	"1"
+			}
+			"attributes"
+			{
+				"derbycane explain"		"1"
+
+				"umbrella recharge rate increased"
+				{
+					"attribute_class"	"umbrella_recharge_rate"
+					"value"				"0.85"
+				}
+				"civ boost cond override"
+				{
+					"attribute_class"	"add_civ_boost_override"
+					"value"				"TF2C_COND_CIV_SPEED 1"
+				}
+			}
+
+			"model_world"				"models/weapons/w_models/w_speedcane.mdl" 
+			"model_player"				"models/weapons/v_models/v_speedcane_civilian.mdl" 
+			"attach_to_hands"			"2"
+			"static_attrs"
+			{
+				"min_viewmodel_offset"	"8 0 -6"
+			}
+			"visuals"
+			{
+				"sound_melee_hit"		"Weapon_SpeedCane.HitFlesh"
+				"sound_melee_hit_world"	"Weapon_SpeedCane.HitWorld"
+			}
+			"item_logname"	"speedcane"
+			"item_iconname"	"speedcane"
+
+			"image_inventory"		"backpack/weapons/w_models/w_speedcane" 
+			"mouse_pressed_sound"	"ui/item_wood_pole_pickup.wav"
+			"drop_sound"			"ui/item_wood_pole_drop.wav"
 		}
 	}
 	"prefabs"
