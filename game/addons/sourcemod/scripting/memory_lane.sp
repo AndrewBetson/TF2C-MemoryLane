@@ -28,6 +28,7 @@ ConVar ml_rollback_sandman_stun;
 ConVar ml_rollback_eat_own_thrown_sandvich;
 ConVar ml_rollback_caber_nerf;
 ConVar ml_rollback_sword_deploy_penalty;
+ConVar ml_rollback_quick_redisguise;
 
 public void OnPluginStart() {
 	GameData game_data = LoadGameConfigFile( "memory_lane.games" );
@@ -39,6 +40,7 @@ public void OnPluginStart() {
 	ml_rollback_eat_own_thrown_sandvich = CreateConVar( "ml_rollback_eat_own_thrown_sandvich", "1", "Enable eating own thrown sandvich." );
 	ml_rollback_caber_nerf = CreateConVar( "ml_rollback_caber_nerf", "1", "Enable old caber base damage/falloff." );
 	ml_rollback_sword_deploy_penalty = CreateConVar( "ml_rollback_sword_deploy_penalty", "1", "Disable sword deploy/holster penalty." );
+	ml_rollback_quick_redisguise = CreateConVar( "ml_rollback_quick_redisguise", "1", "Disable disguising while already disguised being faster." );
 
 	AutoExecConfig( true, "memory_lane" );
 
@@ -99,6 +101,17 @@ public void OnPluginStart() {
 			ThrowError( "Failed to validate CTFWeaponBase::Deploy::NoHolsterPenalty memory patch." );
 		} else if ( !old_eyelander_deploy_speed.Enable() ) {
 			ThrowError( "Failed to enable CTFWeaponBase::Deploy::NoHolsterPenalty memory patch." );
+		}
+	}
+
+	// No quick re-disguise
+
+	if ( ml_rollback_quick_redisguise.BoolValue ) {
+		MemoryPatch no_quick_redisguise_patch = MemoryPatch.CreateFromConf( game_data, "CTFPlayerShared::Disguise::NoQuickReDisguise" );
+		if ( !no_quick_redisguise_patch.Validate() ) {
+			ThrowError( "Failed to validate CTFPlayerShared::Disguise::NoQuickReDisguise memory patch." );
+		} else if ( !no_quick_redisguise_patch.Enable() ) {
+			ThrowError( "Failed to enable CTFPlayerShared::Disguise::NoQuickReDisguise memory patch." );
 		}
 	}
 }
