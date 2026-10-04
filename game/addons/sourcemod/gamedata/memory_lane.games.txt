@@ -124,6 +124,30 @@
 					"patch" "\xF3\x0F\x10\x05\x5E\xB1\x50\x00"
 				}
 			}
+
+			// old soda popper hype condition
+
+			"CTFSodaPopper::SecondaryAttack::CheckOldHypeCondition"
+			{
+				"signature" "CTFSodaPopper::SecondaryAttack"
+				"linux64"
+				{
+					"offset" "18h"
+					"verify" "\xBE\x24\x00\x00\x00"
+					"patch" "\xBE\x13\x00\x00\x00"
+				}
+			}
+
+			"CTFSodaPopper::SecondaryAttack::OldHypeCondition"
+			{
+				"signature" "CTFSodaPopper::SecondaryAttack"
+				"linux64"
+				{
+					"offset" "4Eh"
+					"verify" "\xBE\x24\x00\x00\x00"
+					"patch" "\xBE\x13\x00\x00\x00"
+				}
+			}
 		}
 
 		"Signatures"
@@ -194,6 +218,13 @@
 			{
 				"library"	"server"
 				"linux64"	"@_ZN15CTFPlayerShared8DisguiseEiiP9CTFPlayerb"
+			}
+
+			// old soda popper hype condition
+
+			"CTFSodaPopper::SecondaryAttack"
+			{
+				"library"	"server"
 			}
 		}
 	}

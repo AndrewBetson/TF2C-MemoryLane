@@ -29,6 +29,7 @@ ConVar ml_rollback_eat_own_thrown_sandvich;
 ConVar ml_rollback_caber_nerf;
 ConVar ml_rollback_sword_deploy_penalty;
 ConVar ml_rollback_quick_redisguise;
+ConVar ml_rollback_soda_popper_hype_condition;
 
 public void OnPluginStart() {
 	GameData game_data = LoadGameConfigFile( "memory_lane.games" );
@@ -41,6 +42,7 @@ public void OnPluginStart() {
 	ml_rollback_caber_nerf = CreateConVar( "ml_rollback_caber_nerf", "1", "Enable old caber base damage/falloff." );
 	ml_rollback_sword_deploy_penalty = CreateConVar( "ml_rollback_sword_deploy_penalty", "1", "Disable sword deploy/holster penalty." );
 	ml_rollback_quick_redisguise = CreateConVar( "ml_rollback_quick_redisguise", "1", "Disable disguising while already disguised being faster." );
+	ml_rollback_soda_popper_hype_condition = CreateConVar( "ml_rollback_soda_popper_hype_condition", "1", "Enable old soda popper hype condition." );
 
 	AutoExecConfig( true, "memory_lane" );
 
@@ -112,6 +114,24 @@ public void OnPluginStart() {
 			ThrowError( "Failed to validate CTFPlayerShared::Disguise::NoQuickReDisguise memory patch." );
 		} else if ( !no_quick_redisguise_patch.Enable() ) {
 			ThrowError( "Failed to enable CTFPlayerShared::Disguise::NoQuickReDisguise memory patch." );
+		}
+	}
+
+	// Old soda popper hype condition
+
+	if ( ml_rollback_soda_popper_hype_condition.BoolValue ) {
+		MemoryPatch check_old_hype_condition_patch = MemoryPatch.CreateFromConf( game_data, "CTFSodaPopper::SecondaryAttack::CheckOldHypeCondition" );
+		if ( !check_old_hype_condition_patch.Validate() ) {
+			ThrowError( "Failed to validate CTFSodaPopper::SecondaryAttack::CheckOldHypeCondition memory patch." );
+		} else if ( !check_old_hype_condition_patch.Enable() ) {
+			ThrowError( "Failed to enable CTFSodaPopper::SecondaryAttack::CheckOldHypeCondition memory patch." );
+		}
+
+		MemoryPatch old_hype_condition_patch = MemoryPatch.CreateFromConf( game_data, "CTFSodaPopper::SecondaryAttack::OldHypeCondition" );
+		if ( !old_hype_condition_patch.Validate() ) {
+			ThrowError( "Failed to validate CTFSodaPopper::SecondaryAttack::OldHypeCondition memory patch." );
+		} else if ( !old_hype_condition_patch.Enable() ) {
+			ThrowError( "Failed to enable CTFSodaPopper::SecondaryAttack::OldHypeCondition memory patch." );
 		}
 	}
 }
