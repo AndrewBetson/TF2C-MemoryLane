@@ -225,6 +225,7 @@
 			"CTFSodaPopper::SecondaryAttack"
 			{
 				"library"	"server"
+				"linux64"	"@_ZN13CTFSodaPopper15SecondaryAttackEv"
 			}
 		}
 	}
