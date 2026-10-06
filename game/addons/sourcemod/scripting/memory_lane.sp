@@ -13,7 +13,7 @@
 #include <sourcescramble>
 
 #if !defined PLUGIN_VERSION
-#define PLUGIN_VERSION "0.0.2"
+#define PLUGIN_VERSION "0.0.6"
 #endif // !defined PLUGIN_VERSION
 
 public Plugin myinfo = {
