@@ -29,6 +29,7 @@ ConVar ml_use_custom_item_schema;
 ConVar ml_rollback_sandman_stun;
 ConVar ml_rollback_eat_own_thrown_sandvich;
 ConVar ml_rollback_caber_nerf;
+ConVar ml_rollback_reserve_shooter_airblast_nerf;
 ConVar ml_rollback_sword_deploy_penalty;
 ConVar ml_rollback_quick_redisguise;
 ConVar ml_rollback_soda_popper_hype_condition;
@@ -43,6 +44,7 @@ public void OnPluginStart() {
 	ml_rollback_sandman_stun = CreateConVar( "ml_rollback_sandman_stun", "1", "Enable old Sandman stun effects." );
 	ml_rollback_eat_own_thrown_sandvich = CreateConVar( "ml_rollback_eat_own_thrown_sandvich", "1", "Enable eating own thrown sandvich." );
 	ml_rollback_caber_nerf = CreateConVar( "ml_rollback_caber_nerf", "1", "Enable old caber base damage/falloff." );
+	ml_rollback_reserve_shooter_airblast_nerf = CreateConVar( "ml_rollback_reserve_shooter_airblast_nerf", "1", "Enable reserve shooter minicrit on airblast." );
 	ml_rollback_sword_deploy_penalty = CreateConVar( "ml_rollback_sword_deploy_penalty", "1", "Disable sword deploy/holster penalty." );
 	ml_rollback_quick_redisguise = CreateConVar( "ml_rollback_quick_redisguise", "1", "Disable disguising while already disguised being faster." );
 	ml_rollback_soda_popper_hype_condition = CreateConVar( "ml_rollback_soda_popper_hype_condition", "1", "Enable old soda popper hype condition." );
@@ -141,4 +143,16 @@ public void OnPluginStart() {
 			ThrowError( "Failed to enable CTFSodaPopper::SecondaryAttack::OldHypeCondition memory patch." );
 		}
 	}
+
+	// Reserve shooter airblast minicrits
+
+	if ( ml_rollback_reserve_shooter_airblast_nerf.BoolValue ) {
+		MemoryPatch reserve_shooter_airblast_minicrits_patch = MemoryPatch.CreateFromConf( game_data, "CTFGameRules::ApplyOnDamageModifyRules::ReserveShooterAirblastMinicrits" );
+		if ( !reserve_shooter_airblast_minicrits_patch.Validate() ) {
+			ThrowError( "Failed to validate CTFGameRules::ApplyOnDamageModifyRules::ReserveShooterAirblastMinicrits memory patch." );
+		} else if ( !reserve_shooter_airblast_minicrits_patch.Enable() ) {
+			ThrowError( "Failed to enable CTFGameRules::ApplyOnDamageModifyRules::ReserveShooterAirblastMinicrits memory patch." );
+		}
+	}
 }
+

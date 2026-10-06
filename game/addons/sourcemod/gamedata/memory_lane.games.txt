@@ -13,28 +13,6 @@
 			}
 		}
 
-		"Functions"
-		{
-			//
-			// no minigun ramp up
-			//
-
-			"CTFMinigun::GetProjectileDamage"
-			{
-				"signature" "CTFMinigun::GetProjectileDamage"
-				"callconv" "thiscall"
-				"this" "entity"
-				"return" "float"
-			}
-			"CTFMinigun::GetWeaponSpread"
-			{
-				"signature" "CTFMinigun::GetWeaponSpread"
-				"callconv" "thiscall"
-				"this" "entity"
-				"return" "float"
-			}
-		}
-
 		"MemPatches"
 		{
 			//
@@ -148,36 +126,23 @@
 					"patch" "\xBE\x13\x00\x00\x00"
 				}
 			}
+
+			// reserve shooter airblast minicrits
+
+			"CTFGameRules::ApplyOnDamageModifyRules::ReserveShooterAirblastMinicrits"
+			{
+				"signature" "CTFGameRules::ApplyOnDamageModifyRules"
+				"linux64"
+				{
+					"offset" "2B28h"
+					"verify" "\x84\xC0"
+					"patch" "\x85\xE4"
+				}
+			}
 		}
 
 		"Signatures"
 		{
-			//
-			// no minigun ramp up
-			//
-
-			"CTFWeaponBaseGun::GetProjectileDamage"
-			{
-				"library"	"server"
-				"linux64"	"@_ZN16CTFWeaponBaseGun19GetProjectileDamageEv"
-			}
-			"CTFWeaponBaseGun::GetWeaponSpread"
-			{
-				"library"	"server"
-				"linux64"	"@_ZN16CTFWeaponBaseGun15GetWeaponSpreadEv"
-			}
-
-			"CTFMinigun::GetProjectileDamage"
-			{
-				"library"	"server"
-				"linux64"	"@_ZN10CTFMinigun19GetProjectileDamageEv"
-			}
-			"CTFMinigun::GetWeaponSpread"
-			{
-				"library"	"server"
-				"linux64"	"@_ZN10CTFMinigun15GetWeaponSpreadEv"
-			}
-
 			//
 			// old sandman stun effects
 			//
@@ -226,6 +191,15 @@
 			{
 				"library"	"server"
 				"linux64"	"@_ZN13CTFSodaPopper15SecondaryAttackEv"
+			}
+
+			// reserve shooter airblast minicrits
+
+			// why the fuck is this in the game rules class???
+			"CTFGameRules::ApplyOnDamageModifyRules"
+			{
+				"library"	"server"
+				"linux64"	"@_ZN12CTFGameRules24ApplyOnDamageModifyRulesER15CTakeDamageInfoP11CBaseEntityb"
 			}
 		}
 	}
