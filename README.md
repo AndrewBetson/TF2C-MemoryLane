@@ -5,6 +5,9 @@ TF2C plugin and custom item schema that attempts to recreate TF2 as it existed i
 - The Sandman stuns enemies
 - Demo swords don't have a deploy/holster penalty
 - The Ullapool Caber has it's original base damage and lack of damage falloff
+- Spies don't disguise faster if already disguised
+- The Soda Popper grants minicrits instead of extra airdashes
+- The reserve shooter minicrits airblasted targets
 
 # Dependencies
 [Source Scramble](https://github.com/nosoop/SMExt-SourceScramble/)
