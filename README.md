@@ -8,6 +8,7 @@ TF2C plugin and custom item schema that attempts to recreate TF2 as it existed i
 - Spies don't disguise faster if already disguised
 - The Soda Popper grants minicrits instead of extra airdashes
 - The reserve shooter minicrits airblasted targets
+- Weapons deploy in 0.67 seconds rather than 0.5
 
 # Dependencies
 [Source Scramble](https://github.com/nosoop/SMExt-SourceScramble/)
@@ -21,6 +22,4 @@ For more info, see `LICENSE.md`.
 - Ensure all weapons have original attributes
 - Reimplement item sets
 - Revert the Wrangler's behavior
-- Revert Soda Popper's behavior
-- Revert Gun Mettle Spy changes (if they even exist in TF2C?)
 - Other things I can't think of at the moment

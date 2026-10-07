@@ -31,6 +31,7 @@ ConVar ml_rollback_reserve_shooter_airblast_nerf;
 ConVar ml_rollback_sword_deploy_penalty;
 ConVar ml_rollback_quick_redisguise;
 ConVar ml_rollback_soda_popper_hype_condition;
+ConVar ml_rollback_weapon_deploy_speed;
 
 public void OnPluginStart() {
 	GameData game_data = LoadGameConfigFile( "memory_lane.games" );
@@ -45,6 +46,7 @@ public void OnPluginStart() {
 	ml_rollback_sword_deploy_penalty = CreateConVar( "ml_rollback_sword_deploy_penalty", "1", "Disable sword deploy/holster penalty." );
 	ml_rollback_quick_redisguise = CreateConVar( "ml_rollback_quick_redisguise", "1", "Disable disguising while already disguised being faster." );
 	ml_rollback_soda_popper_hype_condition = CreateConVar( "ml_rollback_soda_popper_hype_condition", "1", "Enable old soda popper hype condition." );
+	ml_rollback_weapon_deploy_speed = CreateConVar( "ml_rollback_weapon_deploy_speed", "1", "Enable old weapon deploy speed." );
 
 	AutoExecConfig( true, "memory_lane" );
 
@@ -147,6 +149,17 @@ public void OnPluginStart() {
 			ThrowError( "Failed to validate CTFGameRules::ApplyOnDamageModifyRules::ReserveShooterAirblastMinicrits memory patch." );
 		} else if ( !reserve_shooter_airblast_minicrits_patch.Enable() ) {
 			ThrowError( "Failed to enable CTFGameRules::ApplyOnDamageModifyRules::ReserveShooterAirblastMinicrits memory patch." );
+		}
+	}
+
+	// Old weapon deploy speed
+
+	if ( ml_rollback_weapon_deploy_speed.BoolValue ) {
+		MemoryPatch old_weapon_deploy_speed_patch = MemoryPatch.CreateFromConf( game_data, "CTFWeaponBase::Deploy::OldDeploySpeed" );
+		if ( !old_weapon_deploy_speed_patch.Validate() ) {
+			ThrowError( "Failed to validate CTFWeaponBase::Deploy::OldDeploySpeed memory patch." );
+		} else if ( !old_weapon_deploy_speed_patch.Enable() ) {
+			ThrowError( "Failed to enable CTFWeaponBase::Deploy::OldDeploySpeed memory patch." );
 		}
 	}
 }
